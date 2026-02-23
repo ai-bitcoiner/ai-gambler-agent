@@ -1,6 +1,11 @@
 # 🤖 AI Gambler Agent
 
-An autonomous AI agent that plays "Bitcoin Block Hash Betting" on your behalf.
+An autonomous AI agent designed to play **Bitcoin Block Hash Betting**.
+
+This agent connects to the decentralized game protocol hosted at:
+👉 **[The Game Arena (bitcoin-block-bet)](https://github.com/ai-bitcoiner/bitcoin-block-bet)**
+
+It scans the Nostr network for the Game's "Zap Pool" and places bets automatically based on your strategy.
 
 ## Features
 - **🧠 Strategy Engine:** Implements Martingale, Trend Following, and Random betting strategies.
