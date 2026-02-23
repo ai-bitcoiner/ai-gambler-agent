@@ -50,12 +50,17 @@ async function placeBet() {
     const [name, domain] = HOUSE_LUD16.split('@');
     const lnurlRes = await axios.get(`https://${domain}/.well-known/lnurlp/${name}`);
     
+    // Parse Metadata (LNURL returns it as a string)
+    const metadata = typeof lnurlRes.data.metadata === 'string' 
+      ? JSON.parse(lnurlRes.data.metadata) 
+      : lnurlRes.data.metadata;
+
     // Create Zap Request Event (Kind 9734) - Required for Zaps
     const zapRequestEvent = {
       kind: 9734,
       content: decision.side, // "HEADS" or "TAILS"
       tags: [
-        ['p', lnurlRes.data.metadata.find(t => t[0] === 'p')?.[1] || ''],
+        ['p', metadata.find(t => t[0] === 'p')?.[1] || ''],
         ['relays', RELAYS[0]],
         ['amount', (decision.amount * 1000).toString()],
         ['lnurl', lnurlRes.data.callback]
