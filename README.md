@@ -35,5 +35,16 @@ It scans the Nostr network for the Game's "Zap Pool" and places bets automatical
 - `MARTINGALE`: The degenerate's choice. Doubles bet after every loss.
 - `TREND`: Follows the winning side (if Heads won 3x, bet Heads).
 
+## ⚠️ Legal Disclaimer
+
+**THIS IS EXPERIMENTAL AI SOFTWARE.**
+
+1.  **Not Financial Advice:** This bot makes automated decisions based on random algorithms. It is not a trading tool.
+2.  **Use Risk:** Running this bot with a connected wallet may result in the loss of funds due to bad strategy, bugs, or market conditions.
+3.  **No Liability:** The creators and contributors are not responsible for any financial losses incurred by using this agent.
+4.  **Compliance:** Ensure you comply with your local laws regarding automated agents and digital assets.
+
+**Run this only with "play money" you are willing to lose.**
+
 ## License
 MIT
